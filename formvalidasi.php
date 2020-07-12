@@ -1,27 +1,27 @@
 <?php
-
+  $txt_file    = file_get_contents('file.txt');
+  $data        = explode("\n", $txt_file);
+  array($data);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $Username = test_input($_POST["Username"]);
-  $Password= test_input($_POST["Password"]);
-  $Nama= test_input($_POST["Nama"]);
-  $Email= test_input($_POST["Email"]);
-  $Nomer_KTP= test_input($_POST["Nomer_KTP"]);
-  $Telp= test_input($_POST["Telp"]);
-  $Kode_pos= test_input($_POST["Kode_pos"]);
-  $jenis_kelamin= test_input($_POST["jenis_kelamin"]);
-  $Alamat= test_input($_POST["Alamat"]);
- 	$Kota= test_input($_POST["Kota"]);
-$Tipe_Pembayaran= test_input($_POST["cekpembayaran[]"]);
+  $Username = input($_POST["Username"]);
+  $Password= input($_POST["Password"]);
+  $Nama= input($_POST["Nama"]);
+  $Email= input($_POST["Email"]);
+  $Nomer_KTP= input($_POST["Nomer_KTP"]);
+  $Telp= input($_POST["Telp"]);
+  $Kode_pos= input($_POST["Kode_pos"]);
+  $jenis_kelamin= input($_POST["jenis_kelamin"]);
+  $Alamat= input($_POST["Alamat"]);
+  $Kota= input($_POST["Kota"]);
 }
 
-function test_input($data) {
+function input($data) {
   $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
+
   return $data;
 }
-echo "<h2>Input:</h2>";
+echo" <h1 align=center><b>Member Online Lazada</h1></b>";
 echo $Username;
 echo "<br>";
 echo $Password;
@@ -42,6 +42,28 @@ echo $Alamat;
 echo "<br>";
 echo $Kota;
 echo "<br>";
-echo $Tipe_Pembayaran;
-echo "<br>";
+
+$file =fopen("file.txt","r+");
+fputs($file, $Username . "\n");
+fputs($file, $Password . "\n");
+fputs($file, $Nama. "\n");
+fputs($file, $Email . "\n");
+fputs($file, $Nomer_KTP . "\n");
+fputs($file, $Telp. "\n");
+fputs($file, $Kode_pos. "\n");
+fputs($file, $jenis_kelamin. "\n");
+fputs($file, $Alamat. "\n");
+fputs($file, $Kota. "\n");
+
+fputs($file,"$Username|$Password|$Nama|$Email|$Nomer_KTP|$Telp|$Kode_pos|$jenis_kelamin|$Alamat|$Kota|\n");
+fclose($file);  
+echo "<center>";
+echo "Data form anda telah tersimpan.....";
+echo "</table>";
 ?>
+</br>
+
+<a align="center" href="form.html">Kembali Ke Menu Form Pendaftaran</a></br>
+
+
+    <link rel="stylesheet" type="text/css" href="form.css">

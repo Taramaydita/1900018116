@@ -2,94 +2,93 @@
 <html>
 <head>
 	<title>Member Belanja</title>
+		<link rel="stylesheet" type="text/css" href="form.css">
 </head>
 <body>
-
-	
-<div class="container">
-	<div class="main">
-		<fieldset>
+<header>
+  <header>
+    <div class="jumbotron">      
+      <h1 style="font-family: Edwardian Script ITC">Lazada</h1>
+    </div>
+		   <div id="menu">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Menjadi_Seller</a></li>
+				<li><a href="">LebihMurahDiAPP</a></li>
+				<li><a href="">Customer</a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="">Daftar</a></li>
+			</ul>
+		</nav>
+	</header>		
 	<form action="formvalidasi.php" method="post">
-		<h1 align="center">Pendaftaran Member Belanja Online Lazada</h1>
-		
-			<center>
-			<table border="2" width="50%" height ="50px">
+	<table border="1" align="center" width="60%" bgcolor="#F0E68C" >
 			<tr>
-				
-			<th colspan="3"><img src="lazada.png" height="100" width="200"></th>
-		</tr>
-
-				<td>
-				<table width="90%" height="150px">
-			</center>
-				
+			<tr bgcolor="#FFD700">
+			<td width="100%" colspan="2" ><h1 align="center">Pendaftaran Member Belanja Online Lazada</h1></td>
+			<style type="text/css">
+			h1 { font-family: "Brush Script MT" ,serif; }
+			</style>
+		
+ 		<div id="runningtext">
+		<marquee behavior="scroll" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+    	Jutaan Diskon Ada Di Lazada
+    </marquee>
+ 
+		
 		<tr>
- 	<td>*Username	:</td>
+ 	<td>*Username	</td>
  	<td><input type="text" name="Username"  /></td>
-<br/>
 	</tr>
 
 	<tr>
-	<td>*Password	:</td> 
+	<td>*Password	</td> 
 	<td><input type="text" name="Password" /></td>
 <br/>
 	</tr>
 	
 	<tr>
-	<td>*Nama	:</td> 
+	<td>*Nama	</td> 
 	<td><input type="text" name="Nama" /></td>
-<br/>
+
 </tr>
 
- 	<td colspan="4"></td>
-	<td> <input type="submit" value="selanjutnya" ></td>
-<br/>
-</tr>
-<tr>
-	<td>*Email	:</td> 
+	<td>*Email	</td> 
 	<td><input type="text" name="Email" /></td>
-<br/>
+
 </tr>
 
 	<tr>
-	<td>*Nomer KTP	:</td> 
+	<td>*Nomer KTP	</td> 
 	<td><input type="text" name="Nomer KTP" /></td>
-<br/>
 </tr>
 <tr>
-	<td>*Telp	:</td> 
+	<td>*Telp	</td> 
 	<td><input type="text" name="Telp" /></td>
-<br/>
+
 </tr>
 
 	<tr>
-	<td>*Kode pos	:</td> 
+	<td>*Kode pos	</td> 
 	<td><input type="text" name="Kode pos" /></td>
-<br/>
 </tr>
 
 	<tr>
-	<td>Jenis Kelamin 	:</td>
+	<td>Jenis Kelamin 	</td>
 	<td><input type="radio" name="jenis kelamin" value="laki-laki" checked /> 
 					laki-laki
 					<input type="radio" name="jenis kelamin" value="perempuan"  /> 
 					perempuan</td> 			
-<br />
+
 	</tr>
 
 	<tr>
-	<td>Alamat	:</td>
+	<td>Alamat	</td>
 	<td><textarea name="Alamat" rows="5" cols="20">
-	
-</textarea>
-<br />
-	</tr>
-
-
+	</textarea>	</tr>
 	<tr>
-	<td>Kota	:</td>
+	<td>Kota	</td>
  	<td><select type="dropdown" name="Kota">
-     <option value="></option">
      <option value="Klaten ">Klaten</option>
      <option value="Ambon">Ambon</option>
      <option value="Balikpapan">Balikpapan</option>
@@ -97,17 +96,19 @@
      <option value="Solo">Solo</option>
      <option value="Gorontalo">Gorontalo</option>
  	
- <br/>
+ <br/></br>
 </tr>
-<tr>
-	<td>Tipe Pembayaran	:</td> 
-	<td><input type="Checkbox" name="cekpembayaran[]" value="BCA" />BCA</td>
-	<td><input type="Checkbox" name="cekpembayaran[]" value="BNI" />BNI</td>
-	<td><input type="Checkbox" name="cekpembayaran[]" value="BRI" />BRI</td>
 
- <br/>
+	<td align="center"> <input type="submit" value="selanjutnya" ></td>
+<td align="center"><button class="tombol" ><a align="center" href="tabel.php">Lihat Tabel</a></td>
+</tr>
+
 
 		</table>
+			<tr>
+				<td ><h3 align="center">Copyright@Taramaydita</h3></td>
+			</tr>
+
 </fieldset>		
 </body>
 </html>
